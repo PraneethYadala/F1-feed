@@ -6,8 +6,8 @@ All you need to do is to clone this repository,
 
 
 ```
-git clone https://github.com/raonibr/f1feeder-part1
-cd f1feeder-part1
+git clone https://github.com/PraneethYadala/F1-feed/
+cd F1-feed
 ```
 
 Then, install the dependencies:
