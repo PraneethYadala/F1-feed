@@ -109,14 +109,14 @@ angular.module('F1FeederApp.controllers', []).
     }); 
 
     //MOVE THIS SHIT TO A SERVICE
-    $http.jsonp('http://ergast.com/api/f1/2013/'+ $routeParams.id +'/results.json?callback=JSON_CALLBACK').success(function(response) {
+    $http.jsonp('http://ergast.com/api/f1/2014/'+ $routeParams.id +'/results.json?callback=JSON_CALLBACK').success(function(response) {
         $scope.race = response.MRData.RaceTable.Races[0];
         $scope.raceResult = response.MRData.RaceTable.Races[0].Results;
     }).error(function(error) {
     });
 
     //THIS ONE AS WELL< FOR A SEPPARATE SERVICE
-    $http.jsonp('http://ergast.com/api/f1/2013/'+ $routeParams.id +'/qualifying.json?callback=JSON_CALLBACK').success(function(response) {
+    $http.jsonp('http://ergast.com/api/f1/2014/'+ $routeParams.id +'/qualifying.json?callback=JSON_CALLBACK').success(function(response) {
         $scope.qualiResult = response.MRData.RaceTable.Races[0].QualifyingResults;
     }).error(function(error) {
     });
